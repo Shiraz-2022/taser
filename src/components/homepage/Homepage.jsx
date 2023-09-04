@@ -31,7 +31,7 @@ function HomePage() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/tasks', {
+      const response = await fetch('/api/tasks', {
         mode: 'cors',
         method: 'GET'
       });
@@ -64,7 +64,7 @@ function HomePage() {
 
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/tasks', {
+      const response = await fetch('/api/tasks', {
         mode: 'cors',
         method: 'POST',
         headers: {
@@ -100,7 +100,7 @@ function HomePage() {
   const deleteTask = async (id, event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/tasks/' + id, {
+      const response = await fetch('/api/tasks/' + id, {
         mode: 'cors',
         method: 'DELETE',
       });
@@ -122,7 +122,7 @@ function HomePage() {
   const updateStatus = async (id, status, event, taskTitle, taskDescription, taskDate) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/tasks/' + id, {
+      const response = await fetch('/api/tasks/' + id, {
         mode: 'cors',
         method: 'PUT',
         headers: {
@@ -162,7 +162,7 @@ function HomePage() {
   const updateTask = async (id, event, title, description, date, status) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/tasks/' + id, {
+      const response = await fetch('/api/tasks/' + id, {
         mode: 'cors',
         method: 'PUT',
         headers: {
