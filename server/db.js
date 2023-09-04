@@ -2,11 +2,12 @@ import mysql from 'mysql2';
 import process from 'process';
 
 const connection = mysql.createConnection({
-    host:process.env.DB_HOST,
-    user:process.env.DB_USER,
-    password:process.env.DB_PASSWORD,
-    database:process.env.DB_DATABASE,
+    host:process.env.DB_HOST||'localhost',
+    user:process.env.DB_USER||'shiraz',
+    password:process.env.DB_PASSWORD||'shiraz2017',
+    database:process.env.DB_DATABASE||'todolistdb',
 });
+
 
 connection.connect((err) => {
     if (err) {
