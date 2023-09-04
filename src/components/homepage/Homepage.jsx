@@ -301,6 +301,11 @@ function HomePage() {
                 currentDate={currentDate}
                 deleteTask={deleteTask}
                 updateTask={updateTask}
+                doingCount={doingCount}
+                doneCount={doneCount}
+                setTodoCount={setTodoCount}
+                setDoingCount={setDoingCount}
+                setDoneCount={setDoneCount}
               />
             </>
           } />
@@ -317,6 +322,11 @@ function HomePage() {
                 currentDate={currentDate}
                 deleteTask={deleteTask}
                 updateTask={updateTask}
+                toDoCount={toDoCount}
+                doneCount={doneCount}
+                setTodoCount={setTodoCount}
+                setDoingCount={setDoingCount}
+                setDoneCount={setDoneCount}
               />
             </>
           } />
@@ -324,7 +334,7 @@ function HomePage() {
           <Route path="/donelist" element={
             <>
               <DoneList
-                doingCount={doneCount}
+                doneCount={doneCount}
                 tasks={tasks}
                 toggleDescription={toggleDescription}
                 updateStatus={updateStatus}
@@ -333,6 +343,11 @@ function HomePage() {
                 currentDate={currentDate}
                 deleteTask={deleteTask}
                 updateTask={updateTask}
+                toDoCount={toDoCount}
+                doingCount={doingCount}
+                setTodoCount={setTodoCount}
+                setDoingCount={setDoingCount}
+                setDoneCount={setDoneCount}
               />
             </>
           } />

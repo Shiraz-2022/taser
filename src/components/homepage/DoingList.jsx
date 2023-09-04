@@ -3,6 +3,7 @@ import './homepage.css';
 import dayjs from 'dayjs';
 import { useState } from 'react';
 import EditTask from './EditTask';
+import TaskTypes from './TaskTypes';
 
 function DoingList(props) {
 
@@ -16,13 +17,13 @@ function DoingList(props) {
 
   function handleDragStart(e, task) {
     e.dataTransfer.setData('task', task);
-    window.history.pushState(null, null, '/');
   }
 
 
   return (
     <>
       {!isEditing && (
+        <>
         <div className='h-p-tasklist-container'>
           <a href="/"><img className='h-p-tasks-cross-image' src='/images/icons8-cross-50.png' alt='cross' /></a>
           <div className='h-p-tasks-doing h-p-task-type'>
@@ -73,6 +74,16 @@ function DoingList(props) {
 
           </div>
         </div>
+        <TaskTypes
+                toDoCount={props.toDoCount}
+                doingCount={props.doingCount}
+                doneCount={props.doneCount}
+                setTodoCount={props.setTodoCount}
+                setDoingCount={props.setDoingCount}
+                setDoneCount={props.setDoneCount}
+                updateStatus={props.updateStatus}
+      />
+      </>
       )}
 
       {isEditing && editingTaskId && (
