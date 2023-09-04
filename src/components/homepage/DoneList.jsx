@@ -26,6 +26,7 @@ function DoneList(props) {
         <>
         <div className='h-p-tasklist-container'>
           <a href="/"><img onClick={props.doneVisible} className='h-p-tasks-cross-image' src='/images/icons8-cross-50.png' alt='cross' /></a>
+          <h2>Done</h2>
           <div className='h-p-tasks-done h-p-task-type'>
 
 

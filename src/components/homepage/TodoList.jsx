@@ -25,8 +25,9 @@ function TodoList(props) {
     {!isEditing && (
       <>
       <div className='h-p-tasklist-container'>
-        <a href='/'><img href='/' onClick={props.toDoVisible} className='h-p-tasks-cross-image' src='/images/icons8-cross-50.png' alt='cross' /></a>
 
+        <a href='/'><img href='/' onClick={props.toDoVisible} className='h-p-tasks-cross-image' src='/images/icons8-cross-50.png' alt='cross' /></a>
+        <h2>To do</h2>
         <div className='h-p-tasks-todo  h-p-task-type'>
 
           {(props.toDoCount === 0 || props.tasks.length === 0) && (

@@ -26,6 +26,7 @@ function DoingList(props) {
         <>
         <div className='h-p-tasklist-container'>
           <a href="/"><img className='h-p-tasks-cross-image' src='/images/icons8-cross-50.png' alt='cross' /></a>
+          <h2>Doing</h2>
           <div className='h-p-tasks-doing h-p-task-type'>
 
             {(props.doingCount === 0 || props.tasks.length === 0) && (
