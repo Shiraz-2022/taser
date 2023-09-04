@@ -1,0 +1,13 @@
+     {/* <div className='h-p-doinglist h-p-task-list' key={task.id}>
+                      <h1>doing</h1>
+                      <h1>{task.title}</h1>
+                      <p>{task.description}</p>
+                      <p>{dayjs(task.date).format('YYYY-MM-DD')}</p>
+                      <p>{task.status}</p>
+                      <form>
+                        <button onClick={(event) => deleteTask(task.id, event)}>Delete</button>
+                        <button onClick={(event) => updateStatus(task.id, 2, event, task.title, task.description)}>Done</button>
+                        <button onClick={() => editTask(task.id)}>Edit</button>
+                      </form>
+
+                    </div> */}
