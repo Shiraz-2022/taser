@@ -16,7 +16,7 @@ function DoingList(props) {
 
   function handleDragStart(e, task) {
     e.dataTransfer.setData('task', task);
-    window.location.assign('/');
+    window.history.pushState(null, null, '/');
   }
 
 
