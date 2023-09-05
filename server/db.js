@@ -8,14 +8,6 @@ const connection = mysql.createConnection({
     database:process.env.MYSQL_ADDON_DB,
 });
 
-// const connection = mysql.createConnection({
-//     host:'localhost',
-//     user:'shiraz',
-//     password:'shiraz2017',
-//     database:'todolistdb',
-// });
-
-
 connection.connect((err) => {
     if (err) {
         console.error('Error connecting mysql database', err);
